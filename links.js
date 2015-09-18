@@ -12,7 +12,7 @@
 			label: 'LinkedIn Profile',
 		    },
 		    {
-			url: '/resume/aaron-zeng-resume.pdf',
+			url: '/resume',
 			label: 'Resume (PDF)',
 		    },
 		];
