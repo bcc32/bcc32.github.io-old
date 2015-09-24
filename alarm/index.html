@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="alarm.js"></script>
+    <style type="text/css">
+      .set {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body ng-app="alarmApp" ng-controller='timeController'>
+    <audio id="alarm" autoplay loop></audio>
+
+    <center>
+      <h1>{{time.toLocaleTimeString()}}</h1>
+
+      <form>
+        <select ng-model="hour">
+          <option ng-repeat="hr in range(0, 23)" ng-value="hr">{{padZero(hr)}}</option>
+        </select>
+        :
+        <select ng-model="minute">
+          <option ng-repeat="mi in range(0, 59)" ng-value="mi">{{padZero(mi)}}</option>
+        </select>
+
+        <button ng-click="setAlarmTime()" ng-class="{set: alarmSet}">Set!</button>
+      </form>
+    </center>
+  </body>
+</html>
