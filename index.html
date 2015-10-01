@@ -2,8 +2,17 @@
 <head>
   <title>Aaron L. Zeng</title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="links.js"></script>
+  <style type="text/css">
+    .linkup {
+      color: #00ff00;
+    }
+    .linkdown {
+      color: #ff0000;
+    }
+  </style>
 </head>
 <body ng-app="website">
 <h1>Welcome!</h1>
@@ -13,6 +22,10 @@
 <h2>Projects</h2>
 
 <ul>
+  <li id="personal-site">
+    <script class="updownquery" type="text/javascript"></script>
+    <a>My personal site</a> is <span class="updown">...</span>
+  </li>
   <li>
     <a href="alarm">Alarm clock</a>
   </li>
