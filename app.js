@@ -1,5 +1,5 @@
 (function() {
-    var personalSite = 'http://b4.dmz.se';
+    var personalSite = 'http://b4.zsh.jp';
 
     $(document).ready(function() {
         $('#personal-site').find('a').attr('href', personalSite);
