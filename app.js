@@ -2,7 +2,9 @@
     var personalSite = 'http://b4.zsh.jp';
 
     $(document).ready(function() {
-        $('#personal-site').find('a').attr('href', personalSite);
+        $('#personal-site')
+          .find('a')
+          .attr('href', personalSite);
         $('#personal-site')
             .find('script.updownquery')
             .attr('src', personalSite + '/api/updown?jsonp=updateLinkUpDown');
