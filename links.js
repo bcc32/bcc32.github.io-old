@@ -8,6 +8,10 @@
             controller: function() {
                 this.links = [
                     {
+                        url: 'https://github.com/bcc32',
+                        label: 'GitHub',
+                    },
+                    {
                         url: 'http://linkedin.com/in/zenga/',
                         label: 'LinkedIn Profile',
                     },
