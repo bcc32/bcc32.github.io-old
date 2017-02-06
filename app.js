@@ -5,14 +5,13 @@
         $('#updown').html('...').removeClass('linkup linkdown');
 
         var nonce = Math.floor(32768 * Math.random());
-        $.ajax({
-            dataType: 'jsonp',
-            data: 'nonce=' + nonce,
-            jsonp: 'pong',
-            url: personalSite + '/api/ping',
+        $.jsonp({
+            url: personalSite + '/api/ping?callback=?',
+            data: { nonce: nonce },
+            timeout: 3000,
         })
         .done(function (data) {
-            if (data.nonce === ~nonce) {
+            if (data.type === 'pong' && data.nonce === ~nonce) {
                 $('#updown').html('up').removeClass('linkdown').addClass('linkup');
             } else {
                 throw new Error('incorrect nonce');
