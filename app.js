@@ -1,5 +1,5 @@
 (function() {
-    var personalSite = 'http://bcc32.com';
+    var personalSite = 'https://bcc32.com';
 
     function updateLinkUpDown() {
         $('#updown').html('...').removeClass('linkup linkdown');
@@ -28,6 +28,6 @@
     });
 
     var app = angular.module('website', [
-	'links',
+  'links',
     ]);
 })();
